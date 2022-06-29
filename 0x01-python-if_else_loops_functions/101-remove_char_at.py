@@ -12,4 +12,6 @@ def remove_char_at(str, n):
     A function that creates a copy of the string, removing the character at the
     position n (not the Python way, the “C array index”).
     """
+    if len(str) <= n:
+        return str
     return str.replace(str[n], '')
