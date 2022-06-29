@@ -5,5 +5,3 @@ def add(a, b):
     """
     if isinstance(a, int) and isinstance(b, int):
         return (a + b)
-    else:
-        print('Numbers are not integers')
