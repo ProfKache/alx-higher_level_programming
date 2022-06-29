@@ -8,6 +8,6 @@ Date: Copyright (c) 2022.
 """
 for letter in range(122, 96, -1):
     if letter % 2 != 0:
-        print(chr(letter).upper(), end='')
+        print("{}".format(chr(letter).upper()), end='')
     else:
-        print(chr(letter), end='')
+        print("{}".format(chr(letter)), end='')
