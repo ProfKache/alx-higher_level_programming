@@ -9,3 +9,5 @@ def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         if row:
             print('{:d} {:d} {:d}'.format(*row))
+        else:
+            print()
