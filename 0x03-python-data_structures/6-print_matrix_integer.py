@@ -6,8 +6,7 @@ def print_matrix_integer(matrix=[[]]):
     Args:
         matrix: The matrix to be printed.
     """
-    if matrix:
-        for row in matrix:
+    for row in matrix:
+        if row:
             print('{:d} {:d} {:d}'.format(*row))
-    else:
         print('')
