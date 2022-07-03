@@ -7,4 +7,4 @@ def print_matrix_integer(matrix=[[]]):
         matrix: The matrix to be printed.
     """
     for row in matrix:
-        print('{:d}'.format(*row))
+        print('{:d}$'.format(*row))
