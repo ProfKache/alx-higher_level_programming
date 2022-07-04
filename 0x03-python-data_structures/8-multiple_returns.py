@@ -7,4 +7,4 @@ def multiple_returns(sentence):
     Args:
         sentence: The string to be evaluated against.
     """
-    return (len(sentence), sentence[0])
+    return (int(len(sentence)), sentence[0])
