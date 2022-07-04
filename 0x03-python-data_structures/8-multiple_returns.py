@@ -7,6 +7,6 @@ def multiple_returns(sentence):
     Args:
         sentence: The string to be evaluated against.
     """
-    if not sentence:
+    if not len(sentence):
         sentence[0] = None
     return (len(sentence), sentence[0])
