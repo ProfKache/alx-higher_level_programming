@@ -13,7 +13,3 @@ def print_matrix_integer(matrix=[[]]):
             else:
                 print('{:d}'.format(matrix[row][column]), end="")
         print("")
-    # if row:
-    # print('{:d} {:d} {:d}'.format(*row))
-    # else:
-    # print()
