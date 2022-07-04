@@ -8,5 +8,7 @@ def multiple_returns(sentence):
         sentence: The string to be evaluated against.
     """
     if not len(sentence):
-        sentence[0] = None
+        sentence_list = list(sentence)
+        sentence_list.insert(0, 'None')
+        sentence = ''.join(sentence_list)
     return (len(sentence), sentence[0])
