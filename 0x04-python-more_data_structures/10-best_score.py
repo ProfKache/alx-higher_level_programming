@@ -9,6 +9,9 @@ def best_score(a_dictionary):
     Return:
         A key with the largest value.
     """
-    if not a_dictionary.values():
+    if not a_dictionary:
         return None
-    return max(list(a_dictionary.values()))
+    highest_score = max(list(a_dictionary.values()))
+    for name, marks in a_dictionary.items():
+        if marks == highest_score:
+            return name
