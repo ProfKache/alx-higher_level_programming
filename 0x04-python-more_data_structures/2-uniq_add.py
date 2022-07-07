@@ -8,7 +8,7 @@ def uniq_add(my_list=[]):
         my_list: The initial list
 
     Return:
-        A new list with some elements replaced.
+        The sum of unique elements.
     """
     unique_list = set(my_list)
     return sum(unique_list)
