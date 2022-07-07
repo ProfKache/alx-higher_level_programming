@@ -9,4 +9,6 @@ def best_score(a_dictionary):
     Return:
         A key with the largest value.
     """
+    if not a_dictionary.values():
+        return None
     return max(list(a_dictionary.values()))
