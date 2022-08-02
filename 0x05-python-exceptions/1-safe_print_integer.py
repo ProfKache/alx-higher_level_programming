@@ -6,10 +6,9 @@ def safe_print_integer(value):
     Args:
         value: A value to be printed
     """
+    if isinstance(value, int):
+        return True
     try:
         print('{:d}'.format(value))
-        print()
-        return True
     except ValueError:
-        print()
         return False
