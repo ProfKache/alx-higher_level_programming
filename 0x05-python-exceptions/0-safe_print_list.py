@@ -7,12 +7,14 @@ def safe_print_list(my_list=[], x=0):
         my_list: a list that contains the items.
         x: the number of elements to print.
     """
+    i = 0
+    if x == 0:
+        print()
+        return i
     try:
-        my_list_sliced = my_list[:x]
-        for i in my_list_sliced:
-            print(i, end='')
+        for i in range(x):
+            print(my_list[i], end='')
         print()
     except IndexError:
-        print('Index Out of range')
-    except TypeError:
-        print('Unsupported Operation')
+        print()
+    return i + 1
