@@ -9,11 +9,12 @@ def safe_print_division(a, b):
     Return:
         The result of division of a and b
     """
-    result = None
     try:
         result = a / b
-    except (ZeroDivisionError, ValueError, TypeError):
+        return result
+    except (ZeroDivisionError):
         result = None
+    except:
+        pass
     finally:
         print('Inside Result: {}'.format(result))
-    return result
