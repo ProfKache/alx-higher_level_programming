@@ -4,11 +4,13 @@ def safe_print_integer(value):
     A function that prints an integer with "{:d}".format().
 
     Args:
-        value: A value to be printed
+        value (int): A value to be printed
+    Return:
+        True if value is an integer, otherwise return False if an exception
+        occurs
     """
     try:
         print('{:d}'.format(value))
-        if isinstance(value, int):
-            return True
-    except ValueError:
+        return True
+    except (ValueError, TypeError):
         return False
