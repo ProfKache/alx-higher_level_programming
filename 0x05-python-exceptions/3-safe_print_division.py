@@ -11,8 +11,8 @@ def safe_print_division(a, b):
     """
     try:
         result = a / b
-    except (TypeError, ZeroDivisionError):
+        return result
+    except (TypeError, ZeroDivisionError, ValueError):
         result = None
     finally:
         print('Inside Result: {}'.format(result))
-    return result
