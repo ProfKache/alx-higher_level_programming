@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+"""
+Program: 3-square.py
+A program that demonstrates the use of Python classes
+Author: Salim J. Kachemela <sakachemela@gmail.com>
+Copyright (c) 2022
+"""
+
+
+class Square:
+    """A class that defines a square with some instance attributes."""
+
+    def __init__(self, size=0) -> None:
+        """
+        A constructor that initializes the size of the circle.
+
+        Args:
+            size(int): The size of the circle
+        """
+        if not isinstance(size, int):
+            raise TypeError('size must be an integer')
+        elif size < 0:
+            raise ValueError('size must be >= 0')
+        self.__size = size
+
+    def area(self) -> int:
+        """ A method that calculates an area of a square
+            Returns:
+                The area of a square.
+        """
+        return self.__size**2
