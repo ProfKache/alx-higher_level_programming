@@ -43,6 +43,10 @@ Checking for all floats:
 
 # Testing for invalid arguments
 
+Checking for a very long int:
+	>>>add_integer(999999999999999999999999999999, 1)
+	1000000000000000000000000000000
+
 Checking for passed 'NaN':
 	>>> add_integer(float('NaN'))
 	Traceback (most recent call last):
