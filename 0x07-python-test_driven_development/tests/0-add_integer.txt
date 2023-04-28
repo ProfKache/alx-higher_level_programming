@@ -1,0 +1,80 @@
+The	``0-add_integer``  module
+=============================
+
+Using ``add_integer``
+-------------------
+
+Importing function from the module:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Checking for module docstring:
+	>>> m = __import__('0-add_integer').__doc__
+	>>> len(m) > 1
+	True
+
+Checking for function docstring:
+	>>> f =  __import__('0-add_integer').add_integer.__doc__
+	>>> len(f) > 1
+	True
+
+Checking for normal addition:
+	>>> add_integer(1, 2)
+	3
+
+Checking for positive with negative:
+	>>> add_integer(1,-2)
+	-1
+
+Checking for negative with positive:
+	>>> add_integer(-1, 2)
+	1
+
+Checking float with int:
+	>>> add_integer(1.1, 2)
+	3
+
+Checking int with float:
+	>>> add_integer(1, 2.1)
+	3
+
+Checking for all floats:
+	>>> add_integer(1.1, 2.1)
+	3
+
+# Testing for invalid arguments
+
+Checking for passed 'NaN':
+	>>> add_integer(float('NaN'))
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
+
+Checking for passed 'inf':
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+Checking for non-number e.g 'str' and number:
+	>>> add_integer('2')
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Checking for number and non-number e.g 'str':
+	>>> add_integer(2, '2')
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+Checking boolean with number:
+	>>> add_integer(True)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Checking number with boolean:
+	>>> add_integer(3, True)
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
